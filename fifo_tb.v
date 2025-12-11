@@ -45,8 +45,6 @@ always  #10 wclk = ~wclk;
 		rrst_n = 0;
 		#5 wrst_n = 1;
 		#10 rrst_n = 1;
-	//	#20 winc = 1'b1;
-	//	rinc =1'b1;
 		#20 wdata =8'h00;
 		@(negedge wclk) wdata = 8'hFF;
 		@(negedge wclk) wdata = 8'hF1;
@@ -61,7 +59,7 @@ always  #10 wclk = ~wclk;
 		@(negedge wclk) wdata = 8'hF2; 
 		@(negedge wclk) wdata = 8'hF3; 
 		@(negedge wclk) wdata = 8'hF4;
-		@(negedge wclk) wdata = 8'hF5; //
+		@(negedge wclk) wdata = 8'hF5; 
 		@(negedge wclk) wdata = 8'hF6;
 		@(negedge wclk) wdata = 8'hF7;
 		@(negedge wclk) wdata = 8'hF4;
@@ -72,6 +70,5 @@ always  #10 wclk = ~wclk;
 		winc =1'b0;
 		#5000 winc =1'b0;
 		#10000 $finish;
-	end
-	
+	end	
 endmodule
