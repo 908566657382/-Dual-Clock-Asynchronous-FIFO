@@ -1,1 +1,2 @@
 # -Dual-Clock-Asynchronous-FIFO
+A Dual-Clock Asynchronous FIFO provides a reliable method for transferring data between two independent clock domains. Because the write and read operations occur under separate, asynchronous clocks, the design must incorporate multi-clock synchronization techniques to ensure data integrity. In this architecture, one clock domain writes data into the FIFO while another asynchronous clock domain reads from it.
